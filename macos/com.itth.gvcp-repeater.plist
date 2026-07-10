@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- gvcp-repeater LaunchDaemon: repairs GigE Vision discovery on multi-NIC macOS.
+     Copyright 2026 ITTH GmbH & Co. KG -->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.itth.gvcp-repeater</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/usr/local/bin/gvcp-repeater.py</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/var/log/gvcp-repeater.log</string>
+    <key>StandardErrorPath</key>
+    <string>/var/log/gvcp-repeater.log</string>
+    <key>ProcessType</key>
+    <string>Background</string>
+</dict>
+</plist>
